@@ -35,8 +35,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Mapa Web</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre el interfaz</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Autor</a></li>                        
                     </ul>
@@ -51,12 +51,42 @@
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Más</a>
             </div>
         </header>
+
+        <!-- Mapa Web-->        
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Mapa Web</h2>
+                    <!--<h3 class="section-subheading text-muted">Visualización de Información de Datos Geográficos</h3>-->
+                </div>
+                <iframe class="d-block mx-auto" src="https://qgiscloud.com/geodesastreslp/EDAN_Achacachi/" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+
+                <!-- Mini mapa-->
+                
+                <!-- Mapa-->
+                                
+                <!--<div style="width: 100%; text-align: center;">
+
+                    <div id="map"></div>
+                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+                    crossorigin=""></script>
+                    <script src="mapa.js"></script>
+                    <script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>
+
+                    <script src="capas/localidades_afec.js"></script>
+                    <iframe class="d-block mx-auto" src="https://qgiscloud.com/geodesastreslp/EDAN_Achacachi/" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+                </div>-->
+
+            </div>
+        </section>
+
         <!-- Productos -->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Productos</h2> 
-                    <h3 class="section-subheading text-muted">FORINLP EDAN v1.0 está disponible para que el público lo descargue en el repositorio en línea de Zenodo (2022) con DOI: https://doi.org/10.5281/zenodo.6200644. El conjunto de datos se almacena en dos formatos diferentes; como formato Comma Separated Values (CSV) para facilitar su uso en cualquier software estadístico, como PostgreSQL (SQL) para su uso con el software PostgreSQL abierto. Además, está disponible como Web Map Service (WMS) para que los usuarios accedan desde cualquier software SIG.</h3>                   
+                    <h3 class="section-subheading text-muted">FORINLP EDAN v1.0 está disponible para que el público lo descargue en el repositorio en línea de Zenodo (2022) con DOI: https://doi.org/10.5281/zenodo.6200644. El conjunto de datos se almacena en dos formatos diferentes; como formato Comma Separated Values (CSV) para facilitar su uso en cualquier software estadístico, como PostgreSQL (SQL) para su uso con el software PostgreSQL abierto. Además, está disponible como Web Map Service (WMS) para que los usuarios accedan desde cualquier software SIG.</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-6">
@@ -101,28 +131,7 @@
                 </div>
             </div>
         </section>
-        <!-- Mapa Web-->        
-        <section class="page-section bg-light" id="portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Mapa Web</h2>
-                    <!--<h3 class="section-subheading text-muted">Visualización de Información de Datos Geográficos</h3>-->
-                </div>
 
-                <div id="map"></div>
-                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-                integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-                crossorigin=""></script>
-                <!-- Mini mapa-->
-                <script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>
-                <!-- Mapa-->
-                <script src="mapa.js"></script>
-                <!--<div style="width: 100%; text-align: center;">
-                    <iframe class="d-block mx-auto" src="https://qgiscloud.com/geodesastreslp/wordpres/" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
-                </div>-->
-
-            </div>
-        </section>
         <!-- Sobre el interfaz-->
         <section class="page-section" id="about">
             <div class="container">
@@ -178,7 +187,6 @@
                 </div>
             </div>
         </div>
-        
         <!-- Pie de pagina-->
         <footer class="footer py-4">
             <div class="container">
