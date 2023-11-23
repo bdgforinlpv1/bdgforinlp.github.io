@@ -86,49 +86,73 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Productos</h2> 
-                    <h3 class="section-subheading text-muted">FORINLP EDAN v1.0 está disponible para que el público lo descargue en el repositorio en línea de Zenodo (2022) con DOI: https://doi.org/10.5281/zenodo.6200644. El conjunto de datos se almacena en dos formatos diferentes; como formato Comma Separated Values (CSV) para facilitar su uso en cualquier software estadístico, como PostgreSQL (SQL) para su uso con el software PostgreSQL abierto. Además, está disponible como Web Map Service (WMS) para que los usuarios accedan desde cualquier software SIG.</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Servicio de Mapa Web (OGC)</h4>
-                        <p class="text-muted">
-                            1. Descargar QGIS desde aquí: <a href="https://qgis.org/es/site/forusers/download.html">https://qgis.org/es/site/forusers/download.html</a><br> 
-                            2. Abra QGIS y vaya a Capa >> Añadir capa >> Añadir capa WMS/WMTS…<br>
-                            3. En la ventana que se abre, haga clic en Nuevo<br>
-                            4. En la ventana que se abre, ingrese:<br>
-                                a. Nombre: 'Multihazard'<br>
-                                b. URL: http://194.66.252.166/geoserver/wms?service=WMS<br>
-                                c. Deje las demás opciones como están y haga clic en Aceptar<br>
-                            5. De vuelta en la ventana anterior, haga clic en Conectar<br>
-                            6. Ahora debería ver una lista de capas disponibles. Seleccione la que desea y haga clic en Añadir<br>
-                            7. La capa seleccionada ahora debería ser visible en su mapa.<br>
-                        </p>
-                    </div>
+                    <h3 class="section-subheading text-muted">
+                        <p><strong>FORINLP EDAN v1.0</strong> ya está disponible para su descarga en nuestro repositorio en línea, accesible a través de este enlace:<a href="https://drive.google.com/drive/folders/1YcF4ZCHCVzaoDe1y3R_gIb2NO5lP3Drp?usp=drive_link" target="_blank">Repositorio FORINLP EDAN</a>.</p>
+                        <p>Este conjunto de datos se entrega en dos formatos versátiles: Comma Separated Values (CSV), que facilita su implementación en cualquier software estadístico, y PostgreSQL (SQL), ideal para aquellos que prefieren trabajar con el software de base de datos PostgreSQL de código abierto. Además, hemos integrado una opción adicional para acceder a los datos mediante Web Map Service (WMS), brindando a los usuarios la flexibilidad de incorporar fácilmente la información en sus aplicaciones de Sistemas de Información Geográfica (SIG) preferidas desde cualquier ubicación</p>
+                        <p>¡Estamos emocionados de poner a disposición esta valiosa herramienta para la comunidad!</p>
+                    </h3>
+                </div>                
+                <div class="row text-center">                  
                     <div class="col-md-6">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Backup BDG EDAN</h4>
+                        <h2 class="my-3">Backup BDG EDAN</h2>
                         <p class="text-muted">
-                            1. Descargar PGAdmin4 desde aquí:  <a href="https://www.pgadmin.org/download/">https://www.pgadmin.org/download/</a><br>
-                            2. Ir a Objeto >> Crear >> Servidor<br>
-                            3. En la pestaña General, dale al servidor un nombre como 'Multihazard'<br>
-                            4. En la pestaña Conexión, ingrese:<br>
-                                a. Nombre del host/dirección: 194.66.252.166<br>
-                                b. Puerto: 5432<br>
-                                c. Nombre de usuario: MHZdb_Read<br>
-                                d. Contraseña: multi1HzR2ad<br>
-                            5. En el panel izquierdo ahora puede navegar por su servidor: Multihazard (o cualquier nombre que le haya dado) >> Bases de datos >> MHZdb >> Esquemas >> multihazard >>Tables<br>
-                            6. Haga clic derecho en la tabla EVENT y seleccione Ver/Editar datos >> Todas las filas<br>
-                            7. Desplácese hasta la derecha, la última columna llamada 'geom' y haga clic en el icono del ojo para obtener una vista previa del mapa<br>
+                            <h4>Descargar el Respaldo de la Base de Datos:</h4>
+                            <ol>
+                                <li>Accede al enlace proporcionado: <a href="https://drive.google.com/drive/folders/1YcF4ZCHCVzaoDe1y3R_gIb2NO5lP3Drp?usp=sharing" target="_blank">Google Drive</a>.</li>
+                                <li>Localiza el archivo de respaldo de la base de datos (<code>bdgforinlp.backup</code>) en la carpeta.</li>
+                                <li>Descarga el archivo a tu máquina local.</li>
+                            </ol>                            
+                            <h4>Restaurar el Respaldo en pgAdmin4:</h4>
+                            <ol>
+                                <li>Abre pgAdmin4 y conéctate al servidor PostgreSQL.</li>
+                                <li>En el panel izquierdo, navega hasta "Servidores" >> "PostgreSQL" >> (tu servidor) >> "Bases de Datos".</li>
+                                <li>Haz clic con el botón derecho en "Bases de Datos" y selecciona "Nueva Base de Datos...".</li>
+                                <li>En la ventana emergente, proporciona un nombre para la nueva base de datos, por ejemplo, <code>bdgforinlp</code>, y haz clic en "Guardar".</li>
+                                <li>Haz clic con el botón derecho en la nueva base de datos y selecciona "Restaurar...".</li>
+                                <li>En la pestaña "General", selecciona el archivo de respaldo descargado (<code>bdgforinlp.backup</code>) como "Nombre de archivo".</li>
+                                <li>En la pestaña "Opciones", asegúrate de que el esquema y las opciones de restauración sean adecuados. Puedes mantener las configuraciones predeterminadas.</li>
+                                <li>Haz clic en "Restaurar".</li>
+                                <li>Espera a que se complete el proceso de restauración. Al finalizar, deberías ver un mensaje indicando que la restauración fue exitosa.</li>
+                                <li>Ahora, en el panel izquierdo, expande la base de datos recién creada (<code>bdgforinlp</code>) y explora el esquema "public" para acceder a tus tablas y datos restaurados.</li>
+                            </ol>
                         </p>
                     </div>
+                    <div class="col-md-6">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h2 class="my-3">Servicio de Mapa Web (OGC)</h2>
+                        <p class="text-muted">                                
+                            <h4 class="my-3">Abre QGIS:</h4>
+                            <ol>
+                                <li>Inicia QGIS en tu máquina.</li>
+                                <li>En la barra de menú de QGIS, ve a Capa -&gt; Añadir capa WMS....</li>
+                                <li>Haz clic en el botón "Nuevo" para añadir un nuevo servidor WMS.</li>
+                            </ol>                        
+                            <h4>Configurar el Servidor WMS:</h4>
+                            <ol>
+                                <li>En la ventana emergente "Nuevo servidor WMS", proporciona un nombre para el servidor (puede ser cualquier nombre descriptivo, por ejemplo, "BDGforINLP").</li>
+                                <li>En la sección "URL", ingresa la URL del WMS que proporcionaste (<code>http://localhost:8081/geoserver/bdgforinlp/wms</code>).</li>
+                                <li>Haz clic en "Aceptar" para cerrar la ventana.</li>
+                            </ol>
+                            <h4>Seleccionar Capas del WMS:</h4>
+                            <ol>
+                                <li>En la ventana "Añadir capa WMS", deberías ver la lista de capas disponibles en el servidor WMS que acabas de agregar.</li>
+                                <li>Selecciona las capas que deseas añadir a tu proyecto en QGIS.</li>
+                                <li>Configurar Opciones (si es necesario):</li>
+                                <li>Puedes ajustar opciones adicionales, como el formato de la imagen, el sistema de referencia espacial (SRS), y otros parámetros según tus necesidades.</li>
+                                <li>Haz clic en "Aceptar" para añadir las capas seleccionadas al proyecto QGIS.</li>
+                                <li>Las capas del WMS deberían aparecer en la ventana de trabajo de QGIS. Puedes interactuar con ellas y realizar análisis geoespaciales según sea necesario.</li>
+                            </ol> 
+                        </p>
+                    </div>                    
                 </div>
+                
             </div>
         </section>
 
